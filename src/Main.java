@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         System.out.println("===== TIC TAC TOE =====");
         System.out.println("Game Starting...");
@@ -13,7 +14,11 @@ public class Main {
             }
             System.out.println();
         }
+
+        char current_player = 'X';
+//        current_player=(current_player=='X')?'O':'X';
         while (true) {
+            current_player=(current_player=='X')?'O':'X';
             System.out.print("ENTER ROW : ");
             int row = sc.nextInt();
             sc.nextLine();
@@ -21,7 +26,7 @@ public class Main {
             int column = sc.nextInt();
             if (row <= 3 && column <= 3) {
                 if (board[row - 1][column - 1] == '_') {
-                    board[row - 1][column - 1] = 'X';
+                    board[row - 1][column - 1] = current_player;
                 } else {
                     System.out.println();
                     System.out.println("Position already occupied");
@@ -39,6 +44,7 @@ public class Main {
                 System.out.println();
             }
         }
+
 
 
         }
