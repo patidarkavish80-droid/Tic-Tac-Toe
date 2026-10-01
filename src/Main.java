@@ -13,25 +13,39 @@ public class Main {
             }
             System.out.println();
         }
-        System.out.print("ENTER ROW : ");
-        int row = sc.nextInt();
-        sc.nextLine();
-        System.out.print("ENTER COLUMN : ");
-        int column = sc.nextInt();
-        board[row-1][column-1] = 'X';
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(board[i][j]);
-                System.out.print(" ");
-
+        while (true) {
+            System.out.print("ENTER ROW : ");
+            int row = sc.nextInt();
+            sc.nextLine();
+            System.out.print("ENTER COLUMN : ");
+            int column = sc.nextInt();
+            if (row <= 3 && column <= 3) {
+                if (board[row - 1][column - 1] == '_') {
+                    board[row - 1][column - 1] = 'X';
+                } else {
+                    System.out.println();
+                    System.out.println("Position already occupied");
+                    System.out.println();
+                }
+            } else {
+                System.out.println("Enter b/w 1 to 3");
+                System.out.println();
             }
-            System.out.println();
+
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    System.out.print(board[i][j] + " ");
+                }
+                System.out.println();
+            }
         }
-//        if(board[row][column]=='_'){
-//            ;
-//        }
+
+
+        }
     }
-}
+
+
+
 
 
 
