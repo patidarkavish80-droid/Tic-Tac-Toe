@@ -62,7 +62,7 @@ Tic-Tac-Toe
 * Score system
 * Better game interface
 * Object-Oriented Programming version
-* Separate classes for Board, Player, and Game
+
 
 ## Author
 
